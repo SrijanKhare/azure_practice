@@ -1,0 +1,239 @@
+{
+	"name": "DestinationDataset_f7z",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Profit_Center",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "Site",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "SalesRep_Code",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "Bill_To",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "Sold_To",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "Ship_To",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "ShipToCustNum",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "Line_Discount_Amount",
+				"type": "float",
+				"precision": 53,
+				"scale": 0
+			},
+			{
+				"name": "Shipment_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Archive_Line",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "Planned_Shipment_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "OrderLine_RelNum",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "ShipTo_Site",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "Created_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Updated_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Open_Order_Amt",
+				"type": "float",
+				"precision": 53,
+				"scale": 0
+			},
+			{
+				"name": "Shipped_Order_Amt",
+				"type": "float",
+				"precision": 53,
+				"scale": 0
+			},
+			{
+				"name": "Open_Order_Amt_USD",
+				"type": "float",
+				"precision": 53,
+				"scale": 0
+			},
+			{
+				"name": "Shipped_Order_Amt_USD",
+				"type": "float",
+				"precision": 53,
+				"scale": 0
+			},
+			{
+				"name": "Unit_Price_USD",
+				"type": "float",
+				"precision": 53,
+				"scale": 0
+			},
+			{
+				"name": "Order_Line_Amt",
+				"type": "float",
+				"precision": 53,
+				"scale": 0
+			},
+			{
+				"name": "Order_Line_Amt_USD",
+				"type": "float",
+				"precision": 53,
+				"scale": 0
+			},
+			{
+				"name": "Curr_Code",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "Company",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "Source_System",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "Ref_Doc_Num",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "Order_Line_Status",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "Order_Line_Qty",
+				"type": "float",
+				"precision": 53,
+				"scale": 0
+			},
+			{
+				"name": "UOM",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "Qty_Shipped",
+				"type": "float",
+				"precision": 53,
+				"scale": 0
+			},
+			{
+				"name": "Unit_Price_Local_Curr",
+				"type": "float",
+				"precision": 53,
+				"scale": 0
+			},
+			{
+				"name": "Market",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "Part_Num",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "Order_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Order_Num",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "Order_Line_Num",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "Ship_By_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Orders"
+		}
+	}
+}
