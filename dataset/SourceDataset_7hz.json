@@ -1,0 +1,172 @@
+{
+	"name": "SourceDataset_7hz",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorageConn",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "OrderRel.csv",
+				"container": "raw"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Profit_Center",
+				"type": "String"
+			},
+			{
+				"name": "Site",
+				"type": "String"
+			},
+			{
+				"name": "SalesRep_Code",
+				"type": "String"
+			},
+			{
+				"name": "Bill_To",
+				"type": "String"
+			},
+			{
+				"name": "Sold_To",
+				"type": "String"
+			},
+			{
+				"name": "Ship_To",
+				"type": "String"
+			},
+			{
+				"name": "Market",
+				"type": "String"
+			},
+			{
+				"name": "Part_Num",
+				"type": "String"
+			},
+			{
+				"name": "Order_Date",
+				"type": "String"
+			},
+			{
+				"name": "Order_Num",
+				"type": "String"
+			},
+			{
+				"name": "Order_Line_Num",
+				"type": "String"
+			},
+			{
+				"name": "Ship_By_Date",
+				"type": "String"
+			},
+			{
+				"name": "Ref_Doc_Num",
+				"type": "String"
+			},
+			{
+				"name": "Order_Line_Status",
+				"type": "String"
+			},
+			{
+				"name": "Order_Line_Qty",
+				"type": "String"
+			},
+			{
+				"name": "UOM",
+				"type": "String"
+			},
+			{
+				"name": "Qty_Shipped",
+				"type": "String"
+			},
+			{
+				"name": "Unit_Price_Local_Curr",
+				"type": "String"
+			},
+			{
+				"name": "Unit_Price_USD",
+				"type": "String"
+			},
+			{
+				"name": "Order_Line_Amt",
+				"type": "String"
+			},
+			{
+				"name": "Order_Line_Amt_USD",
+				"type": "String"
+			},
+			{
+				"name": "Curr_Code",
+				"type": "String"
+			},
+			{
+				"name": "Company",
+				"type": "String"
+			},
+			{
+				"name": "Source_System",
+				"type": "String"
+			},
+			{
+				"name": "Created_Date",
+				"type": "String"
+			},
+			{
+				"name": "Updated_Date",
+				"type": "String"
+			},
+			{
+				"name": "Open_Order_Amt",
+				"type": "String"
+			},
+			{
+				"name": "Shipped_Order_Amt",
+				"type": "String"
+			},
+			{
+				"name": "Open_Order_Amt_USD",
+				"type": "String"
+			},
+			{
+				"name": "Shipped_Order_Amt_USD",
+				"type": "String"
+			},
+			{
+				"name": "Line_Discount_Amount",
+				"type": "String"
+			},
+			{
+				"name": "Shipment_Date",
+				"type": "String"
+			},
+			{
+				"name": "Archive_Line",
+				"type": "String"
+			},
+			{
+				"name": "Planned_Shipment_Date",
+				"type": "String"
+			},
+			{
+				"name": "OrderLine_RelNum",
+				"type": "String"
+			},
+			{
+				"name": "ShipTo_Site",
+				"type": "String"
+			},
+			{
+				"name": "ShipToCustNum",
+				"type": "String"
+			}
+		]
+	}
+}

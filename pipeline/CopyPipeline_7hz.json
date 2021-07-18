@@ -1,0 +1,492 @@
+{
+	"name": "CopyPipeline_7hz",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_7hz",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "raw//OrderRel.csv"
+					},
+					{
+						"name": "Destination",
+						"value": "dbo.Orders_stg"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings",
+							"skipLineCount": 0
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"writeBehavior": "insert"
+					},
+					"enableStaging": false,
+					"validateDataConsistency": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Profit_Center",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Profit_Center",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Site",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Site",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "SalesRep_Code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "SalesRep_Code",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Bill_To",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Bill_To",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Sold_To",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Sold_To",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Ship_To",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Ship_To",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Line_Discount_Amount",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Line_Discount_Amount",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Planned_Shipment_Date",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Planned_Shipment_Date",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "OrderLine_RelNum",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "OrderLine_RelNum",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ShipTo_Site",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ShipTo_Site",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ShipToCustNum",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ShipToCustNum",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Created_Date",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Created_Date",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Updated_Date",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Updated_Date",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Open_Order_Amt",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Open_Order_Amt",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Shipped_Order_Amt",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Shipped_Order_Amt",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Open_Order_Amt_USD",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Open_Order_Amt_USD",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Shipped_Order_Amt_USD",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Shipped_Order_Amt_USD",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Unit_Price_USD",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Unit_Price_USD",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Order_Line_Amt",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Order_Line_Amt",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Order_Line_Amt_USD",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Order_Line_Amt_USD",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Curr_Code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Curr_Code",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Company",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Company",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Source_System",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Source_System",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Ref_Doc_Num",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Ref_Doc_Num",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Order_Line_Status",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Order_Line_Status",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Order_Line_Qty",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Order_Line_Qty",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UOM",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UOM",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Qty_Shipped",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Qty_Shipped",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Unit_Price_Local_Curr",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Unit_Price_Local_Curr",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Market",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Market",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Part_Num",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Part_Num",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Order_Date",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Order_Date",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Order_Num",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Order_Num",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Order_Line_Num",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Order_Line_Num",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Ship_By_Date",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Ship_By_Date",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_7hz",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_7hz",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}
